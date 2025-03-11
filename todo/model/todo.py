@@ -9,8 +9,16 @@ class Todo:
     def mark_completed(self):
         self.completed=True
 
+    def add_tag(self,tag:str):
+        if tag not in self.tags:
+            self.tags.append(tag)
+    def __str__(self)->str:
+        return f"{self.code_id} - {self.title}"
 
+class TodoBook:
+    def __init__(self):
+        self.todos:dict={}
 
-
+    def add_todo(self,title: str,description: str):
 
 
