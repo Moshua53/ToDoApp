@@ -19,6 +19,19 @@ class TodoBook:
     def __init__(self):
         self.todos:dict={}
 
-    def add_todo(self,title: str,description: str):
+    def add_todo(self,title: str,description: str)->int:
+        id=len(self.todos)+1
+        todo=Todo(id,title,description)
+        self.todos[id]=todo
+        return id
+
+    def pending_todos(self)->list[Todo]:
+        
+
+
+
+
+
+
 
 
